@@ -8,17 +8,13 @@
 <h2>Questo è un H2</h2>
 <h3>Questo è un H3</h3>
 <div>
-           <p>published: 14.06.2014, 12:14</p>
-           <h2><a href="">My first post</a></h2>
-           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+{% for post in posts %}
+<div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
        </div>
-    <p>Praesent sapien massa, convallis a pellentesque nec:
-      <ul><li><a href="https://djangogirls.org">voce lista 1</a></li><li><a href="https://djangogirls.org">voce lista2</a></li><li><a href="https://djangogirls.org">voce lista 3</a></li><li><a href="https://djangogirls.org">voce lista 4</a></li></ul> egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; <em>Donec velit neque</em>, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-      <div>
-                 <p>published: 14.06.2014, 12:14</p>
-                 <h2><a href="">My second post</a></h2>
-                 <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-             </div>
-    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. <br /> Curabitur arcu erat, <a href="https://djangogirls.org">DjangoGirls</a> accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin <strong>molestie malesuada</strong>.</p>
 </body>
 </html>
